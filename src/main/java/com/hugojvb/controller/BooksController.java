@@ -6,9 +6,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;  
 import org.springframework.web.bind.annotation.PutMapping;  
 import org.springframework.web.bind.annotation.RequestBody;  
-import org.springframework.web.bind.annotation.RestController;  
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
 import com.hugojvb.model.Books;  
 // import com.hugojvb.service.BooksService;  
+import com.hugojvb.service.BooksService;
 
 @RestController
 public class BooksController {
@@ -37,7 +41,7 @@ public class BooksController {
     private int saveBook(@RequestBody Books books)   
     {  
     booksService.saveOrUpdate(books);  
-    return books.getBookid();  
+    return books.getBookId();  
     }  
     //creating put mapping that updates the book detail   
     @PutMapping("/books")  

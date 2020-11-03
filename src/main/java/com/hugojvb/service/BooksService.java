@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.hugojvb.model.Books;
+import com.hugojvb.repository.BooksRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,7 @@ public class BooksService {
     BooksRepository booksRepository;
 
     public List<Books> getAllBooks() {
-        List<Books> books = new ArrayList()<Books>();
+        List<Books> books = new ArrayList<Books>();
         booksRepository.findAll().forEach(books1 -> books.add(books1));
         return books;
     }
@@ -29,7 +30,7 @@ public class BooksService {
     }
 
     public void delete(int id) {
-        return booksRepository.deleteById(id);
+        booksRepository.deleteById(id);
     }
 
     public void update(Books books, int bookId) {
