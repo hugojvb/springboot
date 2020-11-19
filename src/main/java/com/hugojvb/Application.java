@@ -1,4 +1,4 @@
-package com.hugojvb.Spring.Boot;
+package com.hugojvb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
